@@ -1,50 +1,122 @@
-import React, { useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import light from "../assets/headerImg/Group 2.svg";
 import dark from "../assets/headerImg/night.svg";
 import HutchDropdown from "./HutchDropdown";
-import ServiceDropdown from "./ServiceDropdown"
-
-
+import ServiceDropdown from "./ServiceDropdown";
+import PopUpMenu from "../Components/Menu";
 
 const Header = () => {
+  const [hutchVisible, setHutchVisible] = useState(false);
+  const [serviceVisible, setServiceVisible] = useState(false);
+  const [lightMode, setLightmode] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
 
-  const [hutchVisible,setHutchVisible]=useState(false);
-  const[serviceVisible,setServiceVisivle]=useState(false)
-  const [lightMode,setLightmode]=useState(true);
+  const menuRef=useRef();
 
+  const toggleMenu= () => {
+    setPopupVisible(!popupVisible);
+  };
+  useEffect(() => {
+    if (popupVisible) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
 
-  function lightModeHandler()
-  {
-lightMode?setLightmode(false):setLightmode(true);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [popupVisible]);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setPopupVisible(false);
+    }
+  };
+
+  function lightModeHandler() {
+    lightMode ? setLightmode(false) : setLightmode(true);
   }
   return (
-    <div className=" w-full fixed z-10 bg-gray-50 bg-opacity-20 border-b-yellow-500 border-[1px] backdrop-blur-sm py-2 flex items-center  justify-evenly px-4">
-      <div className="w-[10%] text-xl font-bold">Paper Rabbit</div>
-      <div className=" w-[60%] text-sm  navlinks flex text-gray-800 items-center justify-evenly gap-6">
-        <span>Home</span>
-        <span className="relative " onMouseEnter={()=>setHutchVisible(true)} onMouseLeave={()=>setHutchVisible(false)}>Hutch</span>
-        {hutchVisible?<HutchDropdown/>:null}
-        <span className="" onMouseEnter={()=>setServiceVisivle(true)} onMouseLeave={()=>setServiceVisivle(false)}> Services </span>
-        {
-          serviceVisible?<ServiceDropdown/>:null
-        }
+    <div>
+      <div className="dark:text-white z-50  bg-opacity-70 fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm py-1">
+        <div className="flex justify-between w-full lg:px-8 px-6 items-center" >
+          <div>
+            <h2 className="text-xl ">Paper Rabbit</h2>
+          </div>
+          <ul className="flex justify-evenly text-sm gap-8 sm:hidden md:hidden lg:flex">
+            <li className="cursor-pointer"><a href="/">Home</a></li>
+            <li
+              className="cursor-pointer"
+              onMouseEnter={() => setHutchVisible(true)}
+              onMouseLeave={() => setHutchVisible(false)}
+            >
+              Hutch
+            </li>
+            <li
+              className="cursor-pointer"
+              onMouseEnter={() => setServiceVisible(true)}
+              onMouseLeave={() => setServiceVisible(false)}
+            >
+              Services
+            </li>
+            <li
+              onMouseEnter={() => setPortfolioVisible(true)}
+              onMouseLeave={() => setPortfolioVisible(false)}
+              className="cursor-pointer"
+            >
+              Portfolio
+            </li>
+            <li
+              onMouseEnter={() => setLoungeVisible(true)}
+              onMouseLeave={() => setLoungeVisible(false)}
+              className="cursor-pointer"
+            >
+              Lounge
+            </li>
+            <li className="cursor-pointer">About</li>
+            <li className="cursor-pointer">Careers</li>
+            <li className="cursor-pointer">Store</li>
+            <li className="cursor-pointer">World</li>
+            <li className="cursor-pointer">
+              <a href="/contactus">Contact Us</a>
+            </li>
+          </ul>
 
-        <span>Portfolio</span>
-        <span>Lounge</span>
-        <span>About us</span>
-        <span>Careers</span>
-        <span>Store</span>
-        <span>World</span>
-        <span>ContactUs</span>
+          <div className="relative flex items-center justify-center gap-[4rem]">
+            {lightMode ? (
+              <img
+                className="w-10 h-full"
+                src={dark}
+                alt="darkmode"
+                onClick={lightModeHandler}
+              />
+            ) : (
+              <img
+                className="w-10 h-full"
+                src={light}
+                alt="darkmode"
+                onClick={lightModeHandler}
+              />
+            )}
+
+            <div className="bg-black text-white rounded-full cursor-pointer font-semibold h-8 flex items-center justify-center w-8" onClick={()=>{toggleMenu()}}>PR</div>
+          </div>
+        </div>
+        <div className="z-50 w-full transition-all ease-in-out duration-600">
+          {hutchVisible ? <HutchDropdown/> : null}
+          {serviceVisible ? <ServiceDropdown/> : null}
+          {/* {loungeVisible ? <Lounge /> : null}
+          {portfolioVisible ? <Portfolio /> : null} */}
+        </div>
       </div>
 
-      <div className="w-[10%] flex justify-around items-center">
-      {lightMode? (<img src={light} alt="day icon" className="" onClick={lightModeHandler} />):
-      (<img src={dark} alt="dark mode icon" onClick={lightModeHandler}/>
-      )}
-        <div className="w-8 h-8 bg-black text-white rounded-full flex justify-center items-center  font-semibold">
-          PR
-        </div>
+      {/* Popup Menu Section */}
+      <div
+        className={`popup-section w-full h-screen absolute z-50 top-0 flex items-center justify-center ${
+          popupVisible ? "visible" : "invisible"
+        } dark:bg-black dark:bg-opacity-5 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-5`}
+        ref={menuRef}
+      >
+        <PopUpMenu />
       </div>
     </div>
   );

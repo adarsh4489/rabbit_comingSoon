@@ -1,8 +1,7 @@
-import React from 'react'
 
 const ServiceDropdown = () => {
   return (
-    <div className='w-full absolute top-[48px] flex justify-center backdrop-blur-sm  bg-gray-50 py-4 bg-opacity-20 items-center'>
+    <div className='w-full h-screen  flex justify-center backdrop-blur-sm  py-4 bg-opacity-20 items-center'>
         <div className='w-[50%] flex gap-[8rem]'>
         <div className='flex text-sm flex-col font-semibold gap-1'>
             <h2 className='text-gray-700 '>Hutch</h2>

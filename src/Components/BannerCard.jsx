@@ -57,15 +57,15 @@ const ctaButton = [
 
 const BannerCard = () => {
   return (
-    <div className="bg-white z-10 bg-opacity-20 backdrop-blur-2xl w-[38%] absolute left-[20%] flex flex-col justify-center  text rounded-xl top-[40%]  gap-2 px-4 py-4">
+    <div className="bg-white z-10 bg-opacity-20 backdrop-blur-2xl w-[40%] absolute left-[20%] flex flex-col justify-center  text rounded-xl top-[40%]  gap-2 px-4 py-4">
       <h4 className="text-3xl font-['katibeh']">What Makes You</h4>
       <h2 className="text-4xl font-['Revelstoke']">{title[0]} !</h2>
 
       <p className="font-[Inter] md:text-xs lg:text-sm">{description[0]}</p>
-      <h3 className="hashtag text-lg font-['Heaven']">
+      <h3 className="hashtag text-lg font-['Revelstoke']">
         {hashtag[0]}
       </h3>
-      <button className="w-1/3 bg-gray-800 text-white px-2 py-2 rounded-xl ">
+      <button className="w-1/3 bg-gray-800 text-white px-2 py-2 rounded-lg ">
         {ctaButton[0]}
       </button>
     </div>

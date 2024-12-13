@@ -83,7 +83,7 @@ import gsap from "gsap";
 
 gsap.registerPlugin(useGSAP);
 
-function Banner(props) {
+function Banner(lightMode) {
   const [autoSlide, setAutoSlide] = useState(true);
   useEffect(() => {
     let interval;
@@ -216,114 +216,88 @@ function Banner(props) {
     });
   }, [animate]);
 
-  const mode = false;
-return(
-  <>
-  <div className="carousel w-full">
-  <div id="item1" className="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-      className="w-full" />
-  </div>
-  <div id="item2" className="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-      className="w-full" />
-  </div>
-  <div id="item3" className="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-      className="w-full" />
-  </div>
-  <div id="item4" className="carousel-item w-full">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-      className="w-full" />
-  </div>
-</div>
-<div className="flex w-full justify-center gap-2 py-2">
-  <a href="#item1" className="btn btn-xs">1</a>
-  <a href="#item2" className="btn btn-xs">2</a>
-  <a href="#item3" className="btn btn-xs">3</a>
-  <a href="#item4" className="btn btn-xs">4</a>
-</div>
-  </>
-)
+// return(
+//   <>
+//   <div className="carousel w-full">
+//   <div id="item1" className="carousel-item w-full">
+//     <img
+//       src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+//       className="w-full" />
+//   </div>
+//   <div id="item2" className="carousel-item w-full">
+//     <img
+//       src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+//       className="w-full" />
+//   </div>
+//   <div id="item3" className="carousel-item w-full">
+//     <img
+//       src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+//       className="w-full" />
+//   </div>
+//   <div id="item4" className="carousel-item w-full">
+//     <img
+//       src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+//       className="w-full" />
+//   </div>
+// </div>
+// <div className="flex w-full justify-center gap-2 py-2">
+//   <a href="#item1" className="btn btn-xs">1</a>
+//   <a href="#item2" className="btn btn-xs">2</a>
+//   <a href="#item3" className="btn btn-xs">3</a>
+//   <a href="#item4" className="btn btn-xs">4</a>
+// </div>
+//   </>
+// )
 
 
+  return (
 
-  // return (
-  //   //     <div className="w-full h-full relative animate ">
+    <div className="w-full z-0 overflow-hidden ">
+      <div className="w-full z-0 h-screen">
+        <img
+          className=""
+          src={lightMode ? images_dark[currentIndex] : images_day[currentIndex]}
+          alt="bannerimage"
+          ref={image}
+        />
+      </div>
 
-  //   //      <div className="w-full h-screen animate relative flex flex-col items-center justify-end  overflow-hidden">
-  //   //        <div className="w-full h-screen absolute overflow-hidden">
-  //   //         <img
-  //   //           className="absolute top-0 left-0 right-0  w-[100%] h-screen object-cover  "
-  //   //           src={day1}
-  //   //           alt="bannerimage"
-  //   //         />
-  //   //       </div>
-  //   //       <BannerCard />
+      {currentIndex !== 11 ? (
+        currentIndex % 2 === 0 ? (
+          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-32 rounded-xl px-4 py-4">
+            <h3 className="text-xl">What Makes You </h3>
+            <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
+            <p className="text-xs lg:text-sm xl:text-base ">{description[currentIndex]}</p>
 
-  //   //       <button className="absolute top-1/2 left-20">
-  //   //         <img
-  //   //           src={arrowleft}
-  //   //           alt="left arrow icon "
-  //   //           className="w-8 h-8 image-rendering-crisp-edges"
-  //   //         />
-  //   //       </button>
-  //   //       <button className="absolute top-1/2 right-20">
-  //   //         <img src={arrowright} alt="right arrow icon" className="w-8 h-8" />
-  //   //       </button>
-  //   //  </div>
+            <h2 className="text-xl">{hastag[currentIndex]}</h2>
 
-  //   //    </div>
-  //   <div className="w-full z-0 overflow-hidden ">
-  //     <div className="w-full z-0 h-screen">
-  //       <img
-  //         className=""
-  //         src={mode ? images_dark[currentIndex] : images_day[currentIndex]}
-  //         alt="bannerimage"
-  //         ref={image}
-  //       />
-  //     </div>
+            <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
+              <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
+            </button>
+          </div>
+        ) : (
+          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 right-32 rounded-xl px-4 py-4">
+            <h3 className="text-xl ">What Makes You </h3>
+            <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
+            <p className="text-xs lg:text-sm xl:text-base">{description[currentIndex]}</p>
 
-  //     {currentIndex !== 11 ? (
-  //       currentIndex % 2 === 0 ? (
-  //         <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-32 rounded-xl px-4 py-4">
-  //           <h3 className="text-xl">What Makes You </h3>
-  //           <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
-  //           <p className="text-xs lg:text-sm xl:text-base ">{description[currentIndex]}</p>
+            <h2 className="text-xl">{hastag[currentIndex]}</h2>
 
-  //           <h2 className="text-xl">{hastag[currentIndex]}</h2>
+            <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
+              <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
+            </button>
+          </div>
+        )
+      ) : null}
 
-  //           <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
-  //             <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
-  //           </button>
-  //         </div>
-  //       ) : (
-  //         <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 right-32 rounded-xl px-4 py-4">
-  //           <h3 className="text-xl ">What Makes You </h3>
-  //           <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
-  //           <p className="text-xs lg:text-sm xl:text-base">{description[currentIndex]}</p>
-
-  //           <h2 className="text-xl">{hastag[currentIndex]}</h2>
-
-  //           <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
-  //             <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
-  //           </button>
-  //         </div>
-  //       )
-  //     ) : null}
-
-  //     <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] ">
-  //       <img className="text-lg backdrop-blur-sm rounded-xl " src={arrowleft} alt="" />
-  //     </button>
-  //     <button onClick={navigateNext} className="absolute top-1/2 right-[5%]">
-  //       <img className="text-lg backdrop-blur-sm rounded-xl" src={arrowright} alt="" />
-  //     </button>
-  //   </div>
-  // );
+      <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] ">
+        <img className="text-lg backdrop-blur-sm rounded-xl " src={arrowleft} alt="" />
+      </button>
+      <button onClick={navigateNext} className="absolute top-1/2 right-[5%]">
+        <img className="text-lg backdrop-blur-sm rounded-xl" src={arrowright} alt="" />
+      </button>
+    </div>
+  );
 }
 
 export default Banner;

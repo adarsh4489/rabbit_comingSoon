@@ -5,10 +5,10 @@ import HutchDropdown from "./HutchDropdown";
 import ServiceDropdown from "./ServiceDropdown";
 import PopUpMenu from "../Components/Menu";
 
-const Header = () => {
+const Header = (lightMode ,setLightMode) => {
   const [hutchVisible, setHutchVisible] = useState(false);
   const [serviceVisible, setServiceVisible] = useState(false);
-  const [lightMode, setLightmode] = useState(false);
+ 
   const [popupVisible, setPopupVisible] = useState(false);
 
   const menuRef=useRef();
@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   function lightModeHandler() {
-    lightMode ? setLightmode(false) : setLightmode(true);
+    lightMode ? setLightMode(true) : setLightMode(false);
   }
   return (
     <div>
@@ -87,14 +87,14 @@ const Header = () => {
                 className="w-10 h-full"
                 src={dark}
                 alt="darkmode"
-                onClick={lightModeHandler}
+                onClick={()=>{lightModeHandler()}}
               />
             ) : (
               <img
                 className="w-10 h-full"
                 src={light}
                 alt="darkmode"
-                onClick={lightModeHandler}
+                onClick={()=>{lightModeHandler()}}
               />
             )}
 

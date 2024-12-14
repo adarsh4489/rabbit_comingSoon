@@ -5,7 +5,7 @@ import HutchDropdown from "./HutchDropdown";
 import ServiceDropdown from "./ServiceDropdown";
 import PopUpMenu from "../Components/Menu";
 
-const Header = (lightMode ,setLightMode) => {
+const Header = ({lightMode ,setLightMode}) => {
   const [hutchVisible, setHutchVisible] = useState(false);
   const [serviceVisible, setServiceVisible] = useState(false);
  
@@ -27,13 +27,13 @@ const Header = (lightMode ,setLightMode) => {
   }, [popupVisible]);
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (menuRef.current==event.target) {
       setPopupVisible(false);
     }
   };
 
   function lightModeHandler() {
-    lightMode ? setLightMode(true) : setLightMode(false);
+    !lightMode ? setLightMode(true) : setLightMode(false);
   }
   return (
     <div>

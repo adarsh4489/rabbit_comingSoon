@@ -41,7 +41,6 @@
 
 // export default Banner;
 
-import React, { useContext } from "react";
 import { useState, useRef, useEffect } from "react";
 import Hutch from "../Components/HutchDropdown.jsx";
 
@@ -83,7 +82,7 @@ import gsap from "gsap";
 
 gsap.registerPlugin(useGSAP);
 
-function Banner(lightMode) {
+function Banner({lightMode}) {
   const [autoSlide, setAutoSlide] = useState(true);
   useEffect(() => {
     let interval;

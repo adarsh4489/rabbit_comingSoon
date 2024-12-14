@@ -4,16 +4,16 @@ import Header from './Components/Header'
 import Banner from './Pages/Banner'
 import Contact from './Pages/Contact'
 import './App.css'
-import Test from './Components/Test'
+
 import { useState } from 'react'
 
 
 
 function App() {
-  const[lightMode,setLightMode]=useState(false);
+  const [lightMode,setLightMode]=useState(false);
 
   return (
- <div className=''>
+ <div className={lightMode?"text-white":"text-black"}>
  <Header lightMode={lightMode} setLightMode={setLightMode}/>
  <Routes>
   {/* <Route path='/test' element={<Test />}/> */}

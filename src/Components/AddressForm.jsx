@@ -1,13 +1,12 @@
-import React from "react";
 
 function AddressForm() {
   return (
     <div className="w-full max-w-[1200px]  flex flex-col justify-center pt-11   gap-10 ">
-      <div className="text-black  text-3xl font-bold  col-span-2 mx-auto my-4">
+      <div className="text-black w-full text-center text-3xl font-bold my-4">
         Contact Us
       </div>
-      <div className="flex w-full">
-        <div className="flex flex-col mt-[5rem] gap-6">
+      <div className=" w-full flex md:flex-col lg:flex-row  justify-between mx-auto ">
+        <div className="flex w-1/2 flex-col items-center mt-12 gap-6">
           <div>
             <div className="text-2xl  font-semibold ">Registered Office:</div>
             <div className="text-black text-sm font-normal ">
@@ -46,7 +45,7 @@ function AddressForm() {
           <div className=" flex  gap-6"></div>
         </div>
 
-        <div className="w-full grid grid-cols-2 grid-rows-7 gap-4 text-black dark:text-white">
+        <div className="w-1/2 grid grid-cols-2 grid-rows-7 gap-4 text-black dark:text-white">
           <div className="flex flex-col items-start  justify-start">
             <span className="text-xs pl-5 mb-2">First Name</span>
             <input
@@ -86,7 +85,7 @@ function AddressForm() {
             <select
               type="text"
               placeholder="Full Name"
-              className="pl-5 text-xs bg-gray-50 border-[1px] border-black rounded-[0.75rem] w-[90%] h-[50px] text-black"
+              className="pl-5 text-xs bg-gray-50 border-[1px] border-black rounded-xl w-[90%] h-[50px] text-black"
             >
               <option value="dummy1"> dummy1 </option>
               <option value="dummy2"> dummy2 </option>

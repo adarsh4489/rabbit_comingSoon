@@ -42,7 +42,7 @@ const Header = ({lightMode ,setLightMode}) => {
           <div>
             <h2 className="text-xl ">Paper Rabbit</h2>
           </div>
-          <ul className="flex justify-evenly text-sm gap-8 sm:hidden md:hidden lg:flex">
+          <ul className="lg:flex justify-evenly text-sm gap-6 lg:flex-row">
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li
               className="cursor-pointer"
@@ -81,7 +81,7 @@ const Header = ({lightMode ,setLightMode}) => {
             </li>
           </ul>
 
-          <div className="relative flex items-center justify-center gap-[4rem]">
+          <div className="flex items-center justify-center gap-6">
             {lightMode ? (
               <img
                 className="w-10 h-full"

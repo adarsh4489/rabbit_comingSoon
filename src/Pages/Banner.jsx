@@ -263,7 +263,7 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-32 rounded-xl px-4 py-4">
+          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-32 rounded-xl px-4 py-8">
             <h3 className="text-xl">What Makes You </h3>
             <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm xl:text-base ">{description[currentIndex]}</p>
@@ -290,10 +290,10 @@ function Banner({lightMode}) {
       ) : null}
 
       <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] ">
-        <img className="text-lg backdrop-blur-sm rounded-xl " src={arrowleft} alt="" />
+        <img className="w-10 backdrop-blur-sm  " src={arrowleft} alt="" />
       </button>
       <button onClick={navigateNext} className="absolute top-1/2 right-[5%]">
-        <img className="text-lg backdrop-blur-sm rounded-xl" src={arrowright} alt="" />
+        <img className="w-10  backdrop-blur-sm" src={arrowright} alt="" />
       </button>
     </div>
   );

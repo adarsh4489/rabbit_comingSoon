@@ -37,8 +37,8 @@ const Header = ({lightMode ,setLightMode}) => {
   }
   return (
     <div>
-      <div className="dark:text-white z-50  bg-opacity-70 fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm py-1">
-        <div className="flex justify-between w-full lg:px-8 px-6 items-center" >
+      <div className="dark:text-white z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm ">
+        <div className="flex justify-between w-full bg-gray-50 bg-opacity-70 lg:px-8 px-6 py-2 items-center" >
           <div>
             <h2 className="text-xl ">Paper Rabbit</h2>
           </div>
@@ -113,7 +113,7 @@ const Header = ({lightMode ,setLightMode}) => {
       <div
         className={`popup-section w-full h-screen absolute z-50 top-0 flex items-center justify-center ${
           popupVisible ? "visible" : "invisible"
-        } dark:bg-black dark:bg-opacity-5 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-5`}
+        } dark:bg-black dark:bg-opacity-5 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-5 ${lightMode?"text-black":"text-black bg-black bg-opacity-30"}`}
         ref={menuRef}
       >
         <PopUpMenu />

@@ -4,7 +4,7 @@ import { FaInstagramSquare,FaFacebook,FaGithub,FaLinkedin,FaYoutube,FaPinterest,
 const Menu = () => {
   return (
     
-        <div className='w-[20%] z-50 menu-container flex flex-col gap-1 items-center justify-center text-center '>
+        <div className='w-[80%] md:w-[40%] lg:w-[20%] z-50 menu-container flex flex-col gap-1 items-center justify-center text-center '>
             <div className='w-full bg-white rounded-t-3xl py-2'><a href="/">Home</a></div>
             <div className='bg-white w-full py-2 hover:bg-gray-200'><a href="">Hutch</a></div>
             <div className='bg-white w-full py-2 hover:bg-gray-200'><a href="">Services</a></div>

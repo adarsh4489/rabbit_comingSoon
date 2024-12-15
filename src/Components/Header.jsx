@@ -4,10 +4,14 @@ import dark from "../assets/headerImg/night.svg";
 import HutchDropdown from "./HutchDropdown";
 import ServiceDropdown from "./ServiceDropdown";
 import PopUpMenu from "../Components/Menu";
+import LoungeDropdown from "./LoungeDropdown";
+import PortfolioDropdown from "./PortfolioDropdown";
 
 const Header = ({lightMode ,setLightMode}) => {
   const [hutchVisible, setHutchVisible] = useState(false);
   const [serviceVisible, setServiceVisible] = useState(false);
+  const [loungeVisible, setLoungeVisible] = useState(false);
+  const [portfolioVisible, setPortfolioVisible] = useState(false);
  
   const [popupVisible, setPopupVisible] = useState(false);
 
@@ -40,9 +44,9 @@ const Header = ({lightMode ,setLightMode}) => {
       <div className="dark:text-white z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm ">
         <div className="flex justify-between w-full bg-gray-50 bg-opacity-70 lg:px-8 px-6 py-2 items-center" >
           <div>
-            <h2 className="text-xl ">Paper Rabbit</h2>
+            <h2 className="text-xl font-semibold ">Paper Rabbit</h2>
           </div>
-          <ul className="lg:flex justify-evenly text-sm gap-6 lg:flex-row">
+          <ul className=" hidden lg:flex justify-evenly text-sm gap-6 ">
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li
               className="cursor-pointer"
@@ -81,7 +85,7 @@ const Header = ({lightMode ,setLightMode}) => {
             </li>
           </ul>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4 lg:gap-6">
             {lightMode ? (
               <img
                 className="w-10 h-full"
@@ -104,8 +108,8 @@ const Header = ({lightMode ,setLightMode}) => {
         <div className="z-50 w-full transition-all ease-in-out duration-600">
           {hutchVisible ? <HutchDropdown/> : null}
           {serviceVisible ? <ServiceDropdown/> : null}
-          {/* {loungeVisible ? <Lounge /> : null}
-          {portfolioVisible ? <Portfolio /> : null} */}
+          {loungeVisible ? <LoungeDropdown /> : null}
+          {portfolioVisible ? <PortfolioDropdown /> : null}
         </div>
       </div>
 

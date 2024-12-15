@@ -251,10 +251,10 @@ function Banner({lightMode}) {
 
   return (
 
-    <div className="w-full z-0 overflow-hidden ">
+    <div className="w-full z-0 overflow-hidden relative">
       <div className="w-full z-0 h-screen">
         <img
-          className=""
+          className="h-full w-full"
           src={lightMode ? images_dark[currentIndex] : images_day[currentIndex]}
           alt="bannerimage"
           ref={image}
@@ -263,19 +263,19 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-32 rounded-xl px-4 py-8">
-            <h3 className="text-xl">What Makes You </h3>
-            <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
+          <div className="w-[95%] md:w-[60%] lg:w-2/5  absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
+            <h3 className="text-lg md:text-xl">What Makes You </h3>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm xl:text-base ">{description[currentIndex]}</p>
 
-            <h2 className="text-xl">{hastag[currentIndex]}</h2>
+            <h2 className="text-lg md:text-xl">{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
+            <button className="bg-black text-white w-[60%] md:w-[40%] px-2 py-2 text-sm rounded-xl">
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>
         ) : (
-          <div className="sm:w-[95%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48 right-32 rounded-xl px-4 py-4">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48  md:right-32 rounded-xl px-4 py-4">
             <h3 className="text-xl ">What Makes You </h3>
             <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm xl:text-base">{description[currentIndex]}</p>

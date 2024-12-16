@@ -174,38 +174,11 @@ function Banner({lightMode}) {
     });
   }, [animate]);
 
-// return(
-//   <>
-//   <div className="carousel w-full">
-//   <div id="item1" className="carousel-item w-full">
-//     <img
-//       src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-//       className="w-full" />
-//   </div>
-//   <div id="item2" className="carousel-item w-full">
-//     <img
-//       src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-//       className="w-full" />
-//   </div>
-//   <div id="item3" className="carousel-item w-full">
-//     <img
-//       src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-//       className="w-full" />
-//   </div>
-//   <div id="item4" className="carousel-item w-full">
-//     <img
-//       src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-//       className="w-full" />
-//   </div>
-// </div>
-// <div className="flex w-full justify-center gap-2 py-2">
-//   <a href="#item1" className="btn btn-xs">1</a>
-//   <a href="#item2" className="btn btn-xs">2</a>
-//   <a href="#item3" className="btn btn-xs">3</a>
-//   <a href="#item4" className="btn btn-xs">4</a>
-// </div>
-//   </>
-// )
+  // const colourText=["#FFFFFF","#FEBBCC","ADDDD0","b9f4fd","F1DD8E","E9B384","CEBCFA","E2CEC7","96D6FF","FE9993","A5A4A4"];
+  // const myStyle={
+  // color:colourText[currentIndex],
+  // shadow: `5px 10px ${colourText[currentIndex]} inset`,
+  // };
 
 
   return (
@@ -224,7 +197,7 @@ function Banner({lightMode}) {
         currentIndex % 2 === 0 ? (
           <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
             <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold  font-['Revelstoke']">{title[currentIndex]}!</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold  font-['Revelstoke']" >{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base ">{description[currentIndex]}</p>
 
             <h2 className="text-2xl md:text-4xl font-['Heaven']">{hastag[currentIndex]}</h2>
@@ -236,7 +209,7 @@ function Banner({lightMode}) {
         ) : (
           <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
             <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-3xl font-semibold font-['Revelstoke']">{title[currentIndex]}!</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl  font-semibold font-['Revelstoke']">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base font-['inter]">{description[currentIndex]}</p>
 
             <h2 className="text-2xl md:text-4xl font-['Heaven']">{hastag[currentIndex]}</h2>

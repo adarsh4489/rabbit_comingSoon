@@ -1,48 +1,7 @@
-// import React from "react";
-// import UpdatingModal from "../Components/UpdatingModal";
-// import BannerCard from "../Components/BannerCard";
-// import day1 from "../assets/bannerimgs/day/1.rabbit.jpg";
-// import arrowLeft from "../assets/bannerimgs/left arrow.svg";
-// import arrowRight from "../assets/bannerimgs/right arrow.svg";
-// import { Carousel } from "flowbite-react";
-
-// const Banner = () => {
-//   // const images_day = [day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12]
-//   // const images_dark = [dark1, dark2, dark3, dark4, dark5, dark6, dark7, dark8, dark9, dark10, dark11, dark12]
-
-//   return (
-//     <div className="w-full h-full relative ">
-
-//       <div className="w-full h-screen animate relative flex flex-col items-center justify-end  overflow-hidden">
-//         <div className="w-full h-screen absolute overflow-hidden">
-//           <img
-//             className="absolute top-0 left-0 right-0  w-[100%] h-screen object-cover  "
-//             src={day1}
-//             alt="bannerimage"
-//           />
-//         </div>
-//         <BannerCard />
-
-//         <button className="absolute top-1/2 left-20">
-//           <img
-//             src={arrowLeft}
-//             alt="left arrow icon "
-//             className="w-8 h-8 image-rendering-crisp-edges"
-//           />
-//         </button>
-//         <button className="absolute top-1/2 right-20">
-//           <img src={arrowRight} alt="right arrow icon" className="w-8 h-8" />
-//         </button>
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default Banner;
 
 import { useState, useRef, useEffect } from "react";
-import Hutch from "../Components/HutchDropdown.jsx";
+import leftDark from "../assets/bannerimgs/left dark.svg"
+import rightDark from "../assets/bannerimgs/right dark.svg"
 
 import day1 from "../assets/bannerimgs/day/1.rabbit.jpg";
 import day2 from "../assets/bannerimgs/day/2.lion.jpg";
@@ -263,8 +222,8 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-14 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
-            <h3 className="text-lg md:text-xl font-['katibeh'] ">What Makes You </h3>
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
+            <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold  font-['Revelstoke']">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base ">{description[currentIndex]}</p>
 
@@ -276,9 +235,9 @@ function Banner({lightMode}) {
           </div>
         ) : (
           <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
-            <h3 className="text-xl ">What Makes You </h3>
-            <h2 className="text-3xl font-semibold revel">{title[currentIndex]}!</h2>
-            <p className="text-xs lg:text-sm 2xl:text-base">{description[currentIndex]}</p>
+            <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
+            <h2 className="text-3xl font-semibold font-['Revelstoke']">{title[currentIndex]}!</h2>
+            <p className="text-xs lg:text-sm 2xl:text-base font-['inter]">{description[currentIndex]}</p>
 
             <h2 className="text-2xl md:text-4xl font-['Heaven']">{hastag[currentIndex]}</h2>
 
@@ -290,10 +249,10 @@ function Banner({lightMode}) {
       ) : null}
 
       <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] backdrop-blur-sm rounded-md">
-        <img className="w-10   " src={arrowleft} alt="" />
+       {lightMode?(<img className="w-10   " src={leftDark} alt="" />):(<img className="w-10   " src={arrowleft} alt="" />)}
       </button>
       <button onClick={navigateNext} className="absolute top-1/2 backdrop-blur-sm right-[5%] rounded-md">
-        <img className="w-10 " src={arrowright} alt="" />
+      {lightMode?(<img className="w-10   " src={rightDark} alt="" />):(<img className="w-10   " src={arrowright} alt="" />)}
       </button>
     </div>
   );

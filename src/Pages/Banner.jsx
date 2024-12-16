@@ -275,7 +275,7 @@ function Banner({lightMode}) {
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3 absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
+          <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
             <h3 className="text-xl ">What Makes You </h3>
             <h2 className="text-3xl font-semibold revel">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base">{description[currentIndex]}</p>
@@ -292,7 +292,7 @@ function Banner({lightMode}) {
       <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] backdrop-blur-sm rounded-md">
         <img className="w-10   " src={arrowleft} alt="" />
       </button>
-      <button onClick={navigateNext} className="absolute top-1/2 right-[5%] rounded-md">
+      <button onClick={navigateNext} className="absolute top-1/2 backdrop-blur-sm right-[5%] rounded-md">
         <img className="w-10 " src={arrowright} alt="" />
       </button>
     </div>

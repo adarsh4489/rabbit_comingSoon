@@ -40,9 +40,9 @@ const Header = ({lightMode ,setLightMode}) => {
     !lightMode ? setLightMode(true) : setLightMode(false);
   }
   return (
-    <div>
-      <div className="dark:text-white z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm ">
-        <div className="flex justify-between w-full bg-gray-50 bg-opacity-70 lg:px-8 px-6 py-2 items-center" >
+    <div className="w-full mx-auto">
+      <div className=" z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm ">
+        <div className={`flex justify-between w-full ${!lightMode?"bg-gray-50 bg-opacity-70":"bg-black bg-opacity-30"} lg:px-8 px-6 py-2 items-center`} >
           <div>
             <h2 className="text-xl font-semibold ">Paper Rabbit</h2>
           </div>
@@ -120,7 +120,7 @@ const Header = ({lightMode ,setLightMode}) => {
         } dark:bg-black dark:bg-opacity-5 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-5 ${lightMode?"text-black":"text-black bg-black bg-opacity-30"}`}
         ref={menuRef}
       >
-        <PopUpMenu />
+        <PopUpMenu lightMode={lightMode} setLightMode={setLightMode}/>
       </div>
     </div>
   );

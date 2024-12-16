@@ -254,7 +254,7 @@ function Banner({lightMode}) {
     <div className="w-full z-0 overflow-hidden relative">
       <div className="w-full z-0 h-screen">
         <img
-          className="h-full w-full"
+          className="h-full w-full object-cover"
           src={lightMode ? images_dark[currentIndex] : images_day[currentIndex]}
           alt="bannerimage"
           ref={image}
@@ -263,7 +263,7 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5  absolute backdrop-blur-xl flex flex-col gap-2 top-48 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-14 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
             <h3 className="text-lg md:text-xl">What Makes You </h3>
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm xl:text-base ">{description[currentIndex]}</p>
@@ -275,7 +275,7 @@ function Banner({lightMode}) {
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 top-48  md:right-32 rounded-xl px-4 py-4">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
             <h3 className="text-xl ">What Makes You </h3>
             <h2 className="text-3xl font-semibold">{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm xl:text-base">{description[currentIndex]}</p>
@@ -289,11 +289,11 @@ function Banner({lightMode}) {
         )
       ) : null}
 
-      <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] ">
-        <img className="w-10 backdrop-blur-sm  " src={arrowleft} alt="" />
+      <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] backdrop-blur-sm rounded-md">
+        <img className="w-10   " src={arrowleft} alt="" />
       </button>
-      <button onClick={navigateNext} className="absolute top-1/2 right-[5%]">
-        <img className="w-10  backdrop-blur-sm" src={arrowright} alt="" />
+      <button onClick={navigateNext} className="absolute top-1/2 right-[5%] rounded-md">
+        <img className="w-10 " src={arrowright} alt="" />
       </button>
     </div>
   );

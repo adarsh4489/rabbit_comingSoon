@@ -13,7 +13,7 @@ function App() {
   const [lightMode,setLightMode]=useState(false);
 
   return (
- <div className={lightMode?"text-white w-full h-full max-w-[1400px] mx-auto":"mx-auto max-w-[1400px] w-full h-full text-black"} >
+ <div className={lightMode?"text-white w-full h-full  mx-auto":" w-full mx-auto h-full text-black"} >
  <Header lightMode={lightMode} setLightMode={setLightMode}/>
  <Routes>
   {/* <Route path='/test' element={<Test />}/> */}

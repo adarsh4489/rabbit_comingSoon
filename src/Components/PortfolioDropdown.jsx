@@ -10,65 +10,51 @@ const PortfolioDropdown = () => {
                     <div className="text-neutral-600 dark:text-neutral-50 text-xs font-light  font-['Inter'] leading-none">Hutch</div>
                     <div className='flex flex-col mt-4 '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
-                        {/* <Link to='/branding'> */}
+                       
                         <div className=" text-black dark:text-white text-sm font-semibold font-['Inter'] leading-normal  "> 
-                            {/* <Link to='/hutchlayer'> */}
                             Branding 
-                            {/* </Link>  */}
                             </div>
-                            {/* </Link> */}
                     </div>
                     <div className='flex flex-col  '>
 
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
                         <div className=" text-black dark:text-white text-sm font-semibold font-['Inter'] leading-normal ">
-                            {/* <Link to='/hutchlayer'> */}
-                            Advertising  
-                            {/* </Link> */}
+                            UI/UX
                             </div>
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
                         <div className=" text-black dark:text-white text-sm font-semibold font-['Inter'] leading-normal ">
-                            {/* <Link to='/hutchlayer'> */}
-                            Consulting  
-                            {/* </Link> */}
+                           Website
                             </div>
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
                         <div className=" text-black dark:text-white text-sm font-semibold font-['Inter'] leading-normal ">
-                            {/* <Link to='/hutchlayer'> */}
-                        Analysis & Strategies 
-                        {/* </Link> */}
+                           Editorial
                         </div>
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
                         <div className=" text-black dark:text-white text-sm font-semibold font-['Inter'] leading-normal ">
-                            {/* <Link to='/hutchlayer'> */}
-                            Architecture & Planning 
-                             {/* </Link> */}
+                            Social Network
                              </div>
                     </div>
 
                 </div>
                 <div className="relative flex flex-col items-start justify-start mx-5">
-                    <div className=" text-neutral-600 dark:text-neutral-50 text-xs font-light font-['Inter'] leading-none ">other hutch</div>
+                    <div className=" text-neutral-600 dark:text-neutral-50 text-xs font-light font-['Inter'] leading-none ">Other Portfolio</div>
                     <div className=" text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[20px]">
-                        {/* <Link to='/hutchlayer'> */}
-                        Marketing & PR
-                        {/* </Link> */}
+                        Packing
                         </div>
                     <div className=" text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[16px]">
-                        {/* <Link to='/hutchlayer'> */}
-                        End to End Solutions
-                        {/* </Link> */}
+                       Inetractive
                         </div>
                     <div className=" text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[16px]">
-                        {/* <Link to='/hutchlayer'> */}
-                        Brand Glossary
-                    {/* </Link> */}
+                     Campaign
+                    </div>
+                    <div className=" text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[16px]">
+                     Illustration/Graphics
                     </div>
                 </div>
               

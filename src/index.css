@@ -12,14 +12,13 @@
   
     @font-face {
       font-family: 'Revelstoke';
-      src: url('../src/fonts/website fonts/Revelstoke Grunge.otf') format('opentype');
+      src: url('./assets/websiteFonts/Revelstoke\ BoldGrunge.otf') format('opentype');
   
     }
   
     @font-face {
       font-family: 'Heaven';
-      src: url('../src/fonts/website fonts/Heaven-Regular.otf') format('opentype');
-  
+      src: url('./assets/websiteFonts/Heaven-Regular.otf');
     }
   }
   

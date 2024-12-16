@@ -117,7 +117,7 @@ const Header = ({lightMode ,setLightMode}) => {
       <div
         className={`popup-section w-full h-screen absolute z-50 top-0 flex items-center justify-center ${
           popupVisible ? "visible" : "invisible"
-        } dark:bg-black dark:bg-opacity-5 backdrop-blur-sm dark:backdrop-blur-sm bg-opacity-5 ${lightMode?"text-black":"text-black bg-black bg-opacity-30"}`}
+        } dark:bg-black dark:bg-opacity-5 backdrop-blur-md dark:backdrop-blur-sm bg-opacity-5 ${lightMode?"text-black":"text-black bg-black bg-opacity-30"}`}
         ref={menuRef}
       >
         <PopUpMenu lightMode={lightMode} setLightMode={setLightMode}/>

@@ -174,11 +174,8 @@ function Banner({lightMode}) {
     });
   }, [animate]);
 
-  // const colourText=["#FFFFFF","#FEBBCC","ADDDD0","b9f4fd","F1DD8E","E9B384","CEBCFA","E2CEC7","96D6FF","FE9993","A5A4A4"];
-  // const myStyle={
-  // color:colourText[currentIndex],
-  // shadow: `5px 10px ${colourText[currentIndex]} inset`,
-  // };
+  const colorText=["#FFFFFF","#FEBBCC","#ADDDD0","#B9F4FD","#F1DD8E","#E9B384","#CEBCFA","#E2CEC7","#96D6FF","#FE9993","#A5A4A4"];
+  // const [myStyle,setMyStyle]=useState()
 
 
   return (
@@ -197,24 +194,25 @@ function Banner({lightMode}) {
         currentIndex % 2 === 0 ? (
           <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
             <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold  font-['Revelstoke']" >{title[currentIndex]}!</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold font-['Revelstoke']"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
+           { console.log(colorText[currentIndex])}
             <p className="text-xs lg:text-sm 2xl:text-base ">{description[currentIndex]}</p>
 
-            <h2 className="text-2xl md:text-4xl font-['Heaven']">{hastag[currentIndex]}</h2>
+            <h2 className="text-2xl md:text-4xl font-['Heaven']"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[60%] md:w-[40%] px-2 py-2 text-sm rounded-xl">
+            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl">
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>
         ) : (
           <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
             <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-xl md:text-2xl lg:text-3xl  font-semibold font-['Revelstoke']">{title[currentIndex]}!</h2>
+            <h2 className="text-xl md:text-2xl lg:text-3xl  font-semibold font-['Revelstoke']" style={{ color: colorText[currentIndex] }} >{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base font-['inter]">{description[currentIndex]}</p>
 
-            <h2 className="text-2xl md:text-4xl font-['Heaven']">{hastag[currentIndex]}</h2>
+            <h2 className="text-2xl md:text-4xl font-['Heaven']"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[40%] px-2 py-2 text-sm rounded-xl">
+            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl">
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>

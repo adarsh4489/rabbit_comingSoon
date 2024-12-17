@@ -34,12 +34,16 @@
     
     background-color: #565656;
     color: transparent;
-    text-shadow: 2px 2px 3px  rgba(2, 2, 2, 0.8)  ;
-    
+   
+    text-shadow: -4px -2px 3px  rgba(94, 94, 94, 0.8)  ;
     -webkit-background-clip: text;
        -moz-background-clip: text;
             background-clip: text;
+
   }
+  
+
+ 
   
  
   

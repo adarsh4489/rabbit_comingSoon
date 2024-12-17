@@ -10,7 +10,7 @@ const ServiceDropdown = () => {
                     <div className='flex flex-col mt-4 '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
                         {/* <Link to='/branding'> */}
-                        <div className=" text-black dark:text-white text-sm font-semibold font-['Inter-Regular'] leading-normal  "> 
+                        <div className=" text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal  "> 
                             {/* <Link to='/hutchlayer'> */}
                             Identity 
                             </div>
@@ -19,7 +19,7 @@ const ServiceDropdown = () => {
                     <div className='flex flex-col  '>
 
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
-                        <div className=" text-black dark:text-white text-sm font-semibold font-['Inter-Regular'] leading-normal ">
+                        <div className=" text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal ">
                            
                             Communication 
                             
@@ -27,21 +27,21 @@ const ServiceDropdown = () => {
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
-                        <div className=" text-black dark:text-white text-sm font-semibold font-['Inter-Regular'] leading-normal ">
+                        <div className=" text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal ">
                             
                             Creative
                             </div>
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
-                        <div className=" text-black dark:text-white text-sm font-semibold font-['Inter-Regular'] leading-normal ">
+                        <div className=" text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal ">
                            
                        Digital Design
                         </div>
                     </div>
                     <div className='flex flex-col  '>
                         <span className=' text-xs font-thin text-black dark:text-white mb-[-0.4rem]'>New</span>
-                        <div className=" text-black dark:text-white text-sm font-semibold font-['Inter-Regular'] leading-normal ">
+                        <div className=" text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal ">
                             Development
                              </div>
                     </div>

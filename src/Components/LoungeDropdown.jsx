@@ -8,26 +8,26 @@ const LoungeDropdown = () => {
               <div className="text-neutral-600 dark:text-neutral-50 text-xs font-light font-['Inter-Regular'] leading-none">Lounge</div>
               <div className="flex flex-col mt-4">
                 {/* Blog Section */}
-                <span className="text-xs font-thin text-black dark:text-white mb-[-0.4rem]">New</span>
+                <span className="text-xs font-thin text-black dark:text-white mb-[-0.3rem]">New</span>
                 <div className="text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal">Blog</div>
                 {/* Articles Section */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.4rem]">New</span>
+                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.3rem]">New</span>
                   <div className="text-black dark:text-white text-sm  font-['Inter-Regular'] leading-normal">Articles</div>
                 </div>
                 {/* Casestudy Section */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.4rem]">New</span>
+                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.3rem]">New</span>
                   <div className="text-black dark:text-white text-sm font-['Inter-Regular'] leading-normal">Casestudy</div>
                 </div>
                 {/* Insights Section */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.4rem]">New</span>
+                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.3rem]">New</span>
                   <div className="text-black dark:text-white text-sm font-['Inter-Regular'] leading-normal">Insights</div>
                 </div>
                 {/* Podcasts Section */}
                 <div className="flex flex-col">
-                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.4rem]">New</span>
+                  <span className="text-xs font-thin text-black dark:text-white mb-[-0.3rem]">New</span>
                   <div className="text-black dark:text-white text-sm font-['Inter-Regular'] leading-normal">Podcasts</div>
                 </div>
               </div>
@@ -36,9 +36,9 @@ const LoungeDropdown = () => {
             {/* Second Column */}
             <div className="relative flex flex-col items-start justify-start mx-5">
               <div className="text-neutral-600 dark:text-neutral-50 text-xs font-light font-['Inter'] leading-none">Other Lounge</div>
-              <div className="text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[20px]">FAQ</div>
-              <div className="text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[16px]">Resources</div>
-              <div className="text-black dark:text-white text-sm font-normal font-['Inter'] leading-none mt-[16px]">Gallery</div>
+              <div className="text-black dark:text-white text-sm font-normal font-['Inter-Regular'] leading-none mt-[20px]">FAQ</div>
+              <div className="text-black dark:text-white text-sm font-normal font-['Inter-Regular'] leading-none mt-[16px]">Resources</div>
+              <div className="text-black dark:text-white text-sm font-normal font-['Inter-Regular'] leading-none mt-[16px]">Gallery</div>
             </div>
           </div>
         </div>

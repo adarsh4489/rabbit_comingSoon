@@ -11,13 +11,17 @@
   
     @font-face {
       font-family: 'Revelstoke';
-      src: url('./assets/websiteFonts/Revelstoke\ Condensed.ttf');
+      src: url('./assets/websiteFonts/Revelstoke Condensed.ttf');
   
     }
   
     @font-face {
       font-family: 'Heaven';
       src: url('./assets/websiteFonts/Heaven-Regular.otf');
+    }
+    @font-face {
+      font-family: 'Inter';
+      src: url('./assets/websiteFonts/inter-Light.ttf');
     }
   }
   

@@ -104,8 +104,8 @@ const Header = ({lightMode ,setLightMode}) => {
               />
             )}
 
-            <div className="rounded-full cursor-pointer font-semibold h-8 flex items-center justify-center w-8" onClick={()=>{toggleMenu()}}>
-              <img src={lightMode?lightPR:darkPR} width={35} alt="" />
+            <div className="rounded-full cursor-pointer font-semibold h-8 flex items-center justify-center " onClick={()=>{toggleMenu()}}>
+              <img src={lightMode?(lightPR):(darkPR)}  className="w-[38px] md:w-10"  alt="" />
             </div>
           </div>
         </div>

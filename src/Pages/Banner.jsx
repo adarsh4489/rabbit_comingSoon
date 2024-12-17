@@ -196,7 +196,7 @@ function Banner({lightMode}) {
             <h3 className="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
             <h2 className="text-2xl md:text-3xl lg:text-[3.5rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
            { console.log(colorText[currentIndex])}
-            <p className="text-xs lg:text-sm 2xl:text-base ">{description[currentIndex]}</p>
+            <p className="text-xs lg:text-sm 2xl:text-base font-[inter]">{description[currentIndex]}</p>
 
             <h2 className="text-2xl md:text-4xl font-['Heaven'] engraved-text"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
@@ -205,7 +205,7 @@ function Banner({lightMode}) {
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-40 rounded-xl px-6 py-4">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 right-2 sm:right-4 md:right-40 rounded-xl px-6 py-4">
             <h3 className="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
             <h2 className="text-2xl md:text-3xl lg:text-[3.5rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base font-['inter]">{description[currentIndex]}</p>
@@ -221,10 +221,10 @@ function Banner({lightMode}) {
       ) : null}
 
       <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] backdrop-blur-sm rounded-md">
-       {lightMode?(<img className="w-10   " src={leftDark} alt="" />):(<img className="w-10 md:w-12 lg:w-14   " src={arrowleft} alt="" />)}
+       {lightMode?(<img className="w-8 md:w-10 lg:w-12" src={leftDark} alt="" />):(<img className="w-8 md:w-10 lg:w-12   " src={arrowleft} alt="" />)}
       </button>
       <button onClick={navigateNext} className="absolute top-1/2 backdrop-blur-sm right-[5%] rounded-md">
-      {lightMode?(<img className="w-10   " src={rightDark} alt="" />):(<img className="w-14   " src={arrowright} alt="" />)}
+      {lightMode?(<img className="w-8 md:w-10 lg:w-12" src={rightDark} alt="" />):(<img className="w-8 md:w-10 lg:w-12" src={arrowright} alt="" />)}
       </button>
     </div>
   );

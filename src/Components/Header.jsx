@@ -42,13 +42,13 @@ const Header = ({lightMode ,setLightMode}) => {
     !lightMode ? setLightMode(true) : setLightMode(false);
   }
   return (
-    <div className="w-full mx-auto">
-      <div className={`z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full    backdrop-blur-sm ${lightMode?"bg-gray-400":"bg-gray-50"} bg-gray-50 px-4 lg:px-12 `}>
-        <div className={`flex justify-between w-full lg:w-[83%] mx-auto   py-1 items-center`} >
+    <div className="w-full mx-auto flex ">
+      <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full    backdrop-blur-2xl ${!lightMode?"bg-gray-50":"bg-gray-600"} bg-opacity-40  `}>
+        <div className={`flex justify-between w-full lg:w-[80%] mx-auto py-2 items-center `} >
           <div>
-            <h2 className="text-xl font-semibold ">Paper Rabbit</h2>
+            <h2 className="text-xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
           </div>
-          <ul className=" hidden lg:flex justify-evenly text-xs md:gap-4 lg:gap-8  ">
+          <ul className=" hidden lg:flex justify-evenly text-xs md:gap-4 lg:gap-8 font-['Inter-Light'] ">
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li
               className="cursor-pointer"
@@ -109,7 +109,7 @@ const Header = ({lightMode ,setLightMode}) => {
             </div>
           </div>
         </div>
-        <div className="z-50 w-full transition-all ease-in-out duration-600">
+        <div className="z-50 w-screen transition-all ease-in-out duration-800 ">
           {hutchVisible ? <HutchDropdown/> : null}
           {serviceVisible ? <ServiceDropdown/> : null}
           {loungeVisible ? <LoungeDropdown /> : null}

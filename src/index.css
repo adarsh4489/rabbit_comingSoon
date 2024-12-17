@@ -6,12 +6,13 @@
 @layer base {
     @font-face {
       font-family: 'katibeh';
+      font-weight: 400;
       src: url('./assets/websiteFonts/Katibeh-Regular.ttf');
     } 
   
     @font-face {
       font-family: 'Revelstoke';
-      src: url('./assets/websiteFonts/Revelstoke Condensed.ttf');
+      src: url('./assets/websiteFonts/Revelstoke BoldGrunge.ttf');
   
     }
   
@@ -20,19 +21,30 @@
       src: url('./assets/websiteFonts/Heaven-Regular.otf');
     }
     @font-face {
-      font-family: 'Inter';
-      src: url('./assets/websiteFonts/inter-Light.ttf');
+      font-family: 'Inter-Light';
+      src: url('./assets/websiteFonts/Inter-Light.ttf');
+    }
+    @font-face {
+      font-family: 'Inter-Regular';
+      src: url('./assets/websiteFonts/Inter-Regular.ttf');
     }
   }
   
-  .engraved-text {
-    text-shadow: 
-      1px 1px 2px rgba(0, 0, 0, 0.6), /* Dark shadow at bottom-right */
-      1px 1px 4px rgba(255, 255, 255, 0.8); /* Light shadow at top-left */
+  .engraved-text { 
+    
+    background-color: #565656;
+    color: transparent;
+    text-shadow: 2px 2px 3px  rgba(2, 2, 2, 0.8)  ;
+    
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
   }
   
+ 
+  
 
-  @layer base {
+  /* @layer base {
     html {
       font-family: "Inter", sans-serif;
       font-optical-sizing: auto;
@@ -41,7 +53,7 @@
       font-variation-settings:
         "slnt" 0;
     }
-  }
+  } */
   
   @layer utilities {
   

@@ -6,7 +6,7 @@ const Menu = ({lightMode,setLightMode}) => {
   return (
     
         <div className='w-[80%] md:w-[40%] lg:w-[18%] z-50 menu-container flex flex-col gap-[2px] items-center justify-center text-center '>
-          <div className={`${!lightMode?"text-black":"text-white"} "text-lg font-semibold my-2"`}>Paper Rabbit</div>
+          <div className={`${!lightMode?"text-black":"text-white"} "text-lg font-semibold my-2 font-['Revelstoke']"`}>Paper Rabbit</div>
             <div className='w-full bg-[#fbfbfb] rounded-t-3xl py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="/">Home</a></div>
             <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Hutch</a></div>
             <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Services</a></div>

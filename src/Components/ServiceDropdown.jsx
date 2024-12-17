@@ -2,7 +2,7 @@
 const ServiceDropdown = () => {
   return (
     <div className='w-full h-screen  z-50 backdrop-blur-sm'>
-            <div className="w-full h-[300px] z-50   gap-4 bg-opacity-70 backdrop-blur-2xl dark:bg-opacity-5 dark:backdrop-blur-sm  nav-items bg-gray-50" >
+            <div className="w-full h-[270px] z-50   gap-4 bg-opacity-40 backdrop-blur-sm bg-gray-50" >
             
             <div className=' absolute left-[22.5%] lg:left-[24.1%] top-[10%]  lg:w-[58rem] flex justify-start items-start gap-[7rem]'>
                 <div className="relative flex  flex-col items-start justify-start mx-5 mac:mx-8 gap-2">

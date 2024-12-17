@@ -43,23 +43,23 @@ const Header = ({lightMode ,setLightMode}) => {
   }
   return (
     <div className="w-full mx-auto flex ">
-      <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full    backdrop-blur-2xl ${!lightMode?"bg-gray-50":"bg-gray-600"} bg-opacity-40  `}>
+      <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full  backdrop-blur-sm ${!lightMode?"bg-gray-50":"bg-gray-600"} bg-opacity-50  `}>
         <div className={`flex justify-between w-full lg:w-[75%] mx-auto py-2 items-center `} >
           <div>
             <h2 className="text-2xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
           </div>
           <ul className=" hidden lg:flex justify-evenly text-xs md:gap-4 lg:gap-8 font-['Inter-Regular'] ">
-            <li className="cursor-pointer"><a href="/">Home</a></li>
+            <li className="cursor-pointer py-2"><a href="/">Home</a></li>
             <li
-              className="cursor-pointer"
+              className="cursor-pointer py-2"
               onMouseEnter={() => setHutchVisible(true)}
-              onMouseLeave={() => setHutchVisible(false)}
+              // onMouseLeave={() => setHutchVisible(false)}
             >
               Hutch
             </li>
             <li
-              className="cursor-pointer"
-              onMouseEnter={() => setServiceVisible(true)}
+              className="cursor-pointer py-2"
+              onMouseEnter={() => {setServiceVisible(true) }}
               onMouseLeave={() => setServiceVisible(false)}
             >
               Services
@@ -67,22 +67,22 @@ const Header = ({lightMode ,setLightMode}) => {
             <li
               onMouseEnter={() => setPortfolioVisible(true)}
               onMouseLeave={() => setPortfolioVisible(false)}
-              className="cursor-pointer"
+              className="cursor-pointer py-2"
             >
               Portfolio
             </li>
             <li
               onMouseEnter={() => setLoungeVisible(true)}
               onMouseLeave={() => setLoungeVisible(false)}
-              className="cursor-pointer"
+              className="cursor-pointer py-2"
             >
               Lounge
             </li>
-            <li className="cursor-pointer">About</li>
-            <li className="cursor-pointer">Careers</li>
-            <li className="cursor-pointer">Store</li>
-            <li className="cursor-pointer">World</li>
-            <li className="cursor-pointer">
+            <li className="cursor-pointer py-2">About</li>
+            <li className="cursor-pointer py-2">Careers</li>
+            <li className="cursor-pointer py-2">Store</li>
+            <li className="cursor-pointer py-2">World</li>
+            <li className="cursor-pointer py-2">
               <a href="/contactus">Contact Us</a>
             </li>
           </ul>
@@ -109,7 +109,7 @@ const Header = ({lightMode ,setLightMode}) => {
             </div>
           </div>
         </div>
-        <div className="z-50 w-screen transition-all ease-in-out duration-800 ">
+        <div className="z-50 w-screen transition-all ease-in-out duration-800 "onMouseEnter={()=>{setHutchVisible(true)}} onMouseLeave={()=>{setHutchVisible(false)}}>
           {hutchVisible ? <HutchDropdown/> : null}
           {serviceVisible ? <ServiceDropdown/> : null}
           {loungeVisible ? <LoungeDropdown /> : null}

@@ -21,6 +21,13 @@
     }
   }
   
+  .engraved-text {
+    text-shadow: 
+      1px 1px 2px rgba(0, 0, 0, 0.6), /* Dark shadow at bottom-right */
+      1px 1px 4px rgba(255, 255, 255, 0.8); /* Light shadow at top-left */
+  }
+  
+
   @layer base {
     html {
       font-family: "Inter", sans-serif;

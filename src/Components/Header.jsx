@@ -6,6 +6,8 @@ import ServiceDropdown from "./ServiceDropdown";
 import PopUpMenu from "../Components/Menu";
 import LoungeDropdown from "./LoungeDropdown";
 import PortfolioDropdown from "./PortfolioDropdown";
+import darkPR from '../assets/headerImg/darkPR.svg'
+import lightPR from '../assets/headerImg/lightPR.svg'
 
 const Header = ({lightMode ,setLightMode}) => {
   const [hutchVisible, setHutchVisible] = useState(false);
@@ -41,12 +43,12 @@ const Header = ({lightMode ,setLightMode}) => {
   }
   return (
     <div className="w-full mx-auto">
-      <div className=" z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full backdrop-blur-sm ">
-        <div className={`flex justify-between w-full ${!lightMode?"bg-gray-50 bg-opacity-70":"bg-black bg-opacity-30"} 2xl:px-16 lg:px-8 px-6 py-1 items-center`} >
+      <div className={`z-50  fixed justify-between top-0 transition-all ease-in-out duration-200 w-full    backdrop-blur-sm ${lightMode?"bg-gray-400":"bg-gray-50"} bg-gray-50 px-4 lg:px-12 `}>
+        <div className={`flex justify-between w-full lg:w-[83%] mx-auto   py-1 items-center`} >
           <div>
             <h2 className="text-xl font-semibold ">Paper Rabbit</h2>
           </div>
-          <ul className=" hidden lg:flex justify-evenly text-xs md:gap-6 lg:gap-8 ">
+          <ul className=" hidden lg:flex justify-evenly text-xs md:gap-4 lg:gap-8  ">
             <li className="cursor-pointer"><a href="/">Home</a></li>
             <li
               className="cursor-pointer"
@@ -102,7 +104,9 @@ const Header = ({lightMode ,setLightMode}) => {
               />
             )}
 
-            <div className="bg-black text-white rounded-full cursor-pointer font-semibold h-8 flex items-center justify-center w-8" onClick={()=>{toggleMenu()}}>PR</div>
+            <div className="rounded-full cursor-pointer font-semibold h-8 flex items-center justify-center w-8" onClick={()=>{toggleMenu()}}>
+              <img src={lightMode?lightPR:darkPR} width={35} alt="" />
+            </div>
           </div>
         </div>
         <div className="z-50 w-full transition-all ease-in-out duration-600">

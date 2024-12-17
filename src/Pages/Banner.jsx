@@ -192,27 +192,28 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-32 rounded-xl px-4 py-6">
-            <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold font-['Revelstoke']"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-40 rounded-xl px-6 py-4">
+            <h3 className="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
+            <h2 className="text-2xl md:text-3xl lg:text-[3.5rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
            { console.log(colorText[currentIndex])}
             <p className="text-xs lg:text-sm 2xl:text-base ">{description[currentIndex]}</p>
 
-            <h2 className="text-2xl md:text-4xl font-['Heaven']"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
+            <h2 className="text-2xl md:text-4xl font-['Heaven'] engraved-text"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl">
+            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl" style={{ borderColor: colorText[currentIndex], borderWidth: "1px"}}>
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-32 rounded-xl px-4 py-4">
-            <h3 className="text-[1.75rem] md:text-[2rem] 2xl:text-[2.5rem] font-['katibeh']">What Makes You </h3>
-            <h2 className="text-xl md:text-2xl lg:text-3xl  font-semibold font-['Revelstoke']" style={{ color: colorText[currentIndex] }} >{title[currentIndex]}!</h2>
+          <div className="w-[95%] md:w-[60%]  lg:w-2/5 2xl:w-[30%] absolute backdrop-blur-xl flex flex-col gap-2 bottom-14  md:right-40 rounded-xl px-6 py-4">
+            <h3 className="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
+            <h2 className="text-2xl md:text-3xl lg:text-[3.5rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base font-['inter]">{description[currentIndex]}</p>
 
-            <h2 className="text-2xl md:text-4xl font-['Heaven']"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
+            <h2 className="text-2xl md:text-4xl font-['Heaven'] engraved-text"  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl">
+            <button className="bg-black text-white w-[60%] md:w-[30%] px-2 py-2 text-sm rounded-xl" style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
+      borderStyle: "solid"  }}>
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>
@@ -220,10 +221,10 @@ function Banner({lightMode}) {
       ) : null}
 
       <button onClick={navigatePrevious} className="absolute top-1/2 left-[5%] backdrop-blur-sm rounded-md">
-       {lightMode?(<img className="w-10   " src={leftDark} alt="" />):(<img className="w-10   " src={arrowleft} alt="" />)}
+       {lightMode?(<img className="w-10   " src={leftDark} alt="" />):(<img className="w-10 md:w-12 lg:w-14   " src={arrowleft} alt="" />)}
       </button>
       <button onClick={navigateNext} className="absolute top-1/2 backdrop-blur-sm right-[5%] rounded-md">
-      {lightMode?(<img className="w-10   " src={rightDark} alt="" />):(<img className="w-10   " src={arrowright} alt="" />)}
+      {lightMode?(<img className="w-10   " src={rightDark} alt="" />):(<img className="w-14   " src={arrowright} alt="" />)}
       </button>
     </div>
   );

@@ -192,7 +192,7 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3 bg-gray-50 bg-opacity-40  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-40 rounded-xl px-8 py-4">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3 bg-gray-50 bg-opacity-40  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-40 rounded-xl px-6 py-4">
             <h3 className="text-[2.2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
             <h2 className="text-3xl lg:text-[4rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
            { console.log(colorText[currentIndex])}
@@ -205,7 +205,7 @@ function Banner({lightMode}) {
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3 bg-gray-50 bg-opacity-40 absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 right-2 sm:right-4 md:right-40 rounded-xl px-8 py-4">
+          <div className="w-[95%] md:w-[60%] lg:w-2/5 2xl:w-1/3 bg-gray-50 bg-opacity-40 absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 right-2 sm:right-4 md:right-40 rounded-xl px-6 py-4">
             <h3 className="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem] font-['katibeh']">What Makes You </h3>
             <h2 className="text-2xl md:text-3xl lg:text-[4rem] mb-4 font-semibold font-['Revelstoke'] engraved-text"  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
             <p className="text-xs lg:text-sm 2xl:text-base font-['Inter-Light] text-justify">{description[currentIndex]}</p>

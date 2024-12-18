@@ -48,12 +48,11 @@ const Header = ({lightMode ,setLightMode}) => {
           <div>
             <h2 className="text-2xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
           </div>
-          <ul className=" hidden lg:flex justify-evenly text-xs md:gap-4 lg:gap-8 font-['Inter-Regular'] ">
+          <ul className=" hidden lg:flex justify-evenly items-center text-xs md:gap-4 lg:gap-8 font-['Inter-Regular'] ">
             <li className="cursor-pointer py-2"><a href="/">Home</a></li>
             <li
-              className="cursor-pointer py-2"
-              onMouseEnter={() => setHutchVisible(true)}
-              // onMouseLeave={() => setHutchVisible(false)}
+              className="cursor-pointer py-2 h-[48px] flex items-center"
+              
             >
               Hutch
             </li>
@@ -109,8 +108,8 @@ const Header = ({lightMode ,setLightMode}) => {
             </div>
           </div>
         </div>
-        <div className="z-50 w-screen transition-all ease-in-out duration-800 "onMouseEnter={()=>{setHutchVisible(true)}} onMouseLeave={()=>{setHutchVisible(false)}}>
-          {hutchVisible ? <HutchDropdown/> : null}
+        <div className="z-50 w-screen transition-all ease-in-out duration-800 ">
+          {hutchVisible ? <HutchDropdown setHutchVisible={setHutchVisible}/> : null}
           {serviceVisible ? <ServiceDropdown/> : null}
           {loungeVisible ? <LoungeDropdown /> : null}
           {portfolioVisible ? <PortfolioDropdown /> : null}

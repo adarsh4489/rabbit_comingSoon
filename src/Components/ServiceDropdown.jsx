@@ -1,8 +1,8 @@
 const ServiceDropdown = ({ setServiceVisible }) => {
   return (
-    <div className="w-full h-screen  z-50 backdrop-blur-sm">
+    <div className="w-full h-screen  z-50 backdrop-blur-md">
       <div
-        className="w-full h-[270px] z-50  gap-4 bg-gray-50 bg-opacity-70 backdrop-blur-sm "
+        className="w-full h-[270px] z-50  gap-4 bg-gray-50 bg-opacity-70 backdrop-blur-md "
         onMouseEnter={() => setServiceVisible(true)}
         onMouseLeave={() => setServiceVisible(false)}
       >
@@ -11,7 +11,7 @@ const ServiceDropdown = ({ setServiceVisible }) => {
             <div className="text-neutral-600 dark:text-neutral-50 text-xs font-light  font-['Inter-Light'] leading-none">
               Services
             </div>
-            <div className="flex flex-col mt-4 ">
+            <div className="flex flex-col mt-2 ">
               <span className=" text-xs font-thin text-black  mb-[-0.4rem]">
                 New
               </span>

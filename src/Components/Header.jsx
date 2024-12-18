@@ -43,8 +43,8 @@ const Header = ({lightMode ,setLightMode}) => {
   }
   return (
     <div className="w-full mx-auto flex ">
-      <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full   ${!lightMode?"bg-gray-50":"bg-gray-600"} bg-opacity-50  `}>
-        <div className={`flex justify-between w-full backdrop-blur-sm bg-gray-50 bg-opacity-70 px-2 md:px-16 lg:px-44 mx-auto  items-center `} >
+      <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full      `}>
+        <div className={`flex justify-between w-full backdrop-blur-md ${!lightMode?"bg-gray-50":"bg-gray-500"} bg-opacity-70 px-2 md:px-16 lg:px-44 mx-auto  items-center `} >
           <div>
             <h2 className="text-2xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
           </div>

@@ -193,8 +193,8 @@ function Banner({lightMode}) {
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
           <div className="w-[95%] md:w-[50%] lg:w-[50%] xl:w-[38%] 2xl:w-[40%] bg-gray-50 bg-opacity-40  absolute backdrop-blur-xl flex flex-col gap-2 bottom-16 left-2 sm:left-4 md:left-40 rounded-xl px-5 lg:px-6 py-2 lg:py-3">
-            <h3 className="text-5xl font-['katibeh'] mb-[-0.5rem]">What Makes You </h3>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl  font-semibold font-['Revelstoke'] engraved-text tracking-wide "  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
+            <h3 className=" text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-['katibeh'] mb-[-0.5rem]">What Makes You </h3>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold font-['Revelstoke'] engraved-text tracking-wide "  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
             <p className="text-[10px] md:text-[12px] lg:text-sm  2xl:text-[16px] font-['Inter-Light] text-justify my-1">{description[currentIndex]}</p>
 
             <h2 className="text-3xl lg:text-4xl font-['Heaven'] engraved-text "  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>

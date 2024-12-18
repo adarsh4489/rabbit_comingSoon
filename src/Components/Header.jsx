@@ -109,10 +109,10 @@ const Header = ({lightMode ,setLightMode}) => {
           </div>
         </div>
         <div className="z-50 w-screen transition-all ease-in-out duration-800 ">
-          {hutchVisible ? <HutchDropdown setHutchVisible={setHutchVisible}/> : null}
-          {serviceVisible ? <ServiceDropdown setServiceVisible={setServiceVisible}/> : null}
-          {loungeVisible ? <LoungeDropdown  setLoungeVisible={setLoungeVisible}/> : null}
-          {portfolioVisible ? <PortfolioDropdown setPortfolioVisible={setPortfolioVisible}/> : null}
+          {hutchVisible ? <HutchDropdown setHutchVisible={setHutchVisible} lightMode={lightMode}/> : null}
+          {serviceVisible ? <ServiceDropdown setServiceVisible={setServiceVisible} lightMode={lightMode}/> : null}
+          {loungeVisible ? <LoungeDropdown  setLoungeVisible={setLoungeVisible} lightMode={lightMode}/> : null}
+          {portfolioVisible ? <PortfolioDropdown setPortfolioVisible={setPortfolioVisible} lightMode={lightMode}/> : null}
         </div>
       </div>
 

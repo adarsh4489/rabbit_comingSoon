@@ -44,11 +44,11 @@ const Header = ({lightMode ,setLightMode}) => {
   return (
     <div className="w-full mx-auto flex ">
       <div className={`z-50  fixed  top-0 transition-all ease-in-out duration-200 w-full      `}>
-        <div className={`flex justify-between w-full backdrop-blur-md ${!lightMode?"bg-gray-50":"bg-gray-500"} bg-opacity-70 px-4 md:px-10 lg:px-[7.5%]  2xl:px-52 mx-auto  items-center `} >
+        <div className={`flex justify-between w-full backdrop-blur-md ${!lightMode?"bg-gray-50":"bg-gray-500"} bg-opacity-70 px-6 lg:px-10 xl:px-40 2xl:px-60 mx-auto  items-center `} >
           <div>
-            <h2 className="text-2xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
+            <h2 className=" text-md xl:text-2xl font-semibold font-['Revelstoke'] ">Paper Rabbit</h2>
           </div>
-          <ul className="w-[700px] hidden lg:flex justify-evenly items-center text-xs md:gap-4 lg:gap-8 font-['Inter-Regular'] ">
+          <ul className="w-[700px] hidden lg:flex justify-evenly items-center text-xs md:gap-1  xl:gap-4 2xl:gap-8 font-['Inter-Regular'] ">
             <li className="cursor-pointer py-2"><a href="/">Home</a></li>
             <li
               className="cursor-pointer h-[48px] flex items-center"

@@ -7,7 +7,7 @@ const LoungeDropdown = ({ setLoungeVisible,lightMode }) => {
         onMouseLeave={() => setLoungeVisible(false)}
       >
         {/* absolute left-[22.5%] lg:left-[24.1%] top-[10%] */}
-        <div className=" lg:w-[700px] flex justify-start items-start gap-[7rem]">
+        <div className=" lg:w-[700px] flex justify-start items-start gap-[7rem] px-2 ">
           {/* First Column */}
           <div className="relative flex flex-col items-start justify-start mx-5 mac:mx-8 gap-2">
             <div className=" text-xs font-light font-['Inter-Regular'] leading-none">

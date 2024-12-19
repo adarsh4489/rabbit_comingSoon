@@ -2,11 +2,12 @@ const LoungeDropdown = ({ setLoungeVisible,lightMode }) => {
   return (
     <div className="w-full h-screen z-50 backdrop-blur-md">
       <div
-        className={`w-full h-[270px] z-50  gap-4 ${!lightMode?"bg-gray-50":"bg-gray-500 text-neutral-50"} bg-opacity-70 backdrop-blur-md `}
+        className={`w-full h-[270px] z-50 flex justify-center items-center gap-4 ${!lightMode?"bg-gray-50":"bg-gray-500 text-neutral-50"} bg-opacity-70 backdrop-blur-md `}
         onMouseEnter={() => setLoungeVisible(true)}
         onMouseLeave={() => setLoungeVisible(false)}
       >
-        <div className="absolute left-[22.5%] lg:left-[24.1%] top-[10%] lg:w-[58rem] flex justify-start items-start gap-[7rem]">
+        {/* absolute left-[22.5%] lg:left-[24.1%] top-[10%] */}
+        <div className=" lg:w-[700px] flex justify-start items-start gap-[7rem]">
           {/* First Column */}
           <div className="relative flex flex-col items-start justify-start mx-5 mac:mx-8 gap-2">
             <div className=" text-xs font-light font-['Inter-Regular'] leading-none">

@@ -212,7 +212,7 @@ function Banner({lightMode}) {
 
             <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-['Heaven'] engraved-text "  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[32%]  md:w-[35%] 2xl:w-[30%] px-2 py-2 2xl:py-3 my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
+            <button className="bg-black text-white w-[32%]  md:w-[35%] 2xl:w-[30%] px-2 py-2 2xl:py-3 lg:my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
       borderStyle: "solid"  }}>
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>

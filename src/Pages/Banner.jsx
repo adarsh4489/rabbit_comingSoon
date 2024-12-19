@@ -192,27 +192,27 @@ function Banner({lightMode}) {
 
       {currentIndex !== 11 ? (
         currentIndex % 2 === 0 ? (
-          <div className="w-[95%] md:w-[50%] lg:w-[50%] xl:w-[40%] 2xl:w-[35%] bg-gray-50 bg-opacity-40  absolute backdrop-blur-xl flex flex-col gap-2 2xl:gap-3  bottom-16 left-2 sm:left-4 md:left-40 rounded-xl px-5 lg:px-6 py-2 lg:py-3 xl:py-4 2xl:py-5">
-            <h3 className=" text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-['katibeh'] mb-[-0.5rem]">What Makes You </h3>
+          <div className="w-[98%] md:w-[50%] lg:w-[50%] xl:w-[40%] 2xl:w-[36%] bg-gray-50 bg-opacity-40 absolute backdrop-blur-xl flex flex-col gap-2 2xl:gap-3 bottom-20 md:bottom-16  left-[0.3rem] sm:left[0.75rem] md:left-40 2xl:left-48 rounded-xl px-5 lg:px-6 py-2 lg:py-3 xl:py-3 2xl:py-4 ">
+            <h3 className=" text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-['katibeh'] lg:mt-[-0.75rem] mb-[-0.5rem] lg:mb-[-1rem] xl:mb-[-1.2rem] 2xl:mb[-1.5rem]">What Makes You </h3>
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold font-['Revelstoke'] engraved-text tracking-wide "  style={{ color: colorText[currentIndex] }}>{title[currentIndex]}!</h2>
             <p className="text-[10px] md:text-[12px] lg:text-sm  2xl:text-[16px] font-['Inter-Light] text-justify my-1">{description[currentIndex]}</p>
 
             <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-['Heaven'] engraved-text "  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[50%] md:w-[35%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] px-2 py-2 my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
+            <button className="bg-black text-white w-[32%]  md:w-[35%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] px-2 py-2 2xl:py-3 my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
       borderStyle: "solid"  }}>
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[35%] bg-gray-50 bg-opacity-40 absolute backdrop-blur-xl flex flex-col gap-2 2xl:gap-3 bottom-16 right-2 sm:right-4 md:right-40 rounded-xl px-5 lg:px-6 py-2 lg:py-3 xl:py-4 2xl:py-5">
-            <h3 className=" text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-['katibeh'] mb-[-0.5rem]">What Makes You </h3>
+          <div className="w-[98%] sm:w-[95%] md:w-[50%] lg:w-[45%] xl:w-[40%] 2xl:w-[36%] bg-gray-50 bg-opacity-40 absolute backdrop-blur-xl flex flex-col gap-2 2xl:gap-3 bottom-20 md:bottom-16 right-[0.3rem] sm:right-[0.75rem] md:right-40 2xl:right-48 rounded-xl px-5 lg:px-6 py-2 lg:py-3 xl:py-3 2xl:py-4">
+            <h3 className=" text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-['katibeh'] lg:mt-[-0.75rem] mb-[-0.5rem] lg:mb-[-1rem] xl:mb[-1.2rem] 2xl:mb-[-1.5rem]">What Makes You </h3>
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-semibold font-['Revelstoke'] engraved-text tracking-wide "  style={{ color: colorText[currentIndex] }}>SECOND!</h2>
             <p className="text-[10px] md:text-[12px] lg:text-sm  2xl:text-[16px] font-['Inter-Light] text-justify my-1">{description[currentIndex]}</p>
 
             <h2 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-['Heaven'] engraved-text "  style={{ color: colorText[currentIndex] }}>{hastag[currentIndex]}</h2>
 
-            <button className="bg-black text-white w-[50%] md:w-[35%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] px-2 py-2 my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
+            <button className="bg-black text-white w-[32%]  md:w-[35%] 2xl:w-[30%] px-2 py-2 2xl:py-3 my-1 text-[10px]  md:text-[12px] lg:text-sm rounded-xl " style={{ borderColor: colorText[currentIndex], borderWidth: "1px", 
       borderStyle: "solid"  }}>
               <a href="tel:+919900149537">{ctaButton[currentIndex]}</a>
             </button>

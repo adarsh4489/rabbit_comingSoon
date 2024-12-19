@@ -5,19 +5,19 @@ import { FaInstagramSquare,FaFacebook,FaGithub,FaLinkedin,FaYoutube,FaPinterest,
 const Menu = ({lightMode,setLightMode}) => {
   return (
     
-        <div className='w-[80%] md:w-[40%] lg:w-[20%] z-50 menu-container flex flex-col gap-[2px] items-center justify-center text-center '>
+        <div className='w-[60%] sm:w-[45%] md:w-[35%] lg:w-[25%] z-50 menu-container flex flex-col gap-[2px] items-center justify-center text-center '>
           <div className={`${!lightMode?"text-black":"text-white"} "text-lg md:text-xl font-semibold font-['Revelstoke']  my-2 "`}>Paper Rabbit</div>
             <div className='w-full bg-[#fbfbfb] rounded-t-3xl py-2 bg-opacity-40 hover:bg-gray-100'><a href="/">Home</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Hutch</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Services</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Portfolio</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Lounge</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">About Us</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Careers</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Store</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">World</a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 bg-opacity-40 hover:bg-gray-100'><a href="">Contact Us </a></div>
-            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 flex justify-center gap-10 bg-opacity-40 hover:bg-gray-100 relative'><a href="">Client Login</a>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Hutch</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Services</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Portfolio</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Lounge</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">About Us</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Careers</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Store</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">World</a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 bg-opacity-40 hover:bg-gray-100'><a href="">Contact Us </a></div>
+            <div className='bg-[#fbfbfb] w-full py-1 lg:py-2 2xl:py-3 flex justify-center gap-10 bg-opacity-40 hover:bg-gray-100 relative'><a href="">Client Login</a>
             <span className="absolute right-5 top-2 cursor-pointer hover:scale-110"><FaUser/></span>
             </div>
             <div className='rounded-b-3xl w-full py-3 bg-opacity-40 hover:bg-gray-100 bg-[#fbfbfb] flex   text-xl justify-between px-6 items-center'>
